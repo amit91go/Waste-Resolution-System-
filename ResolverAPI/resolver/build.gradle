@@ -1,0 +1,17 @@
+plugins {
+    id "org.springframework.boot" version "2.2.1.RELEASE"
+}
+
+dependencyManagement {
+        imports {
+            mavenBom("org.springframework.boot:spring-boot-dependencies:2.2.1.RELEASE")
+        }
+}
+
+dependencies {
+		implementation project(':shared')
+}
+
+bootJar {
+    mainClassName = 'de.bamberg.uni.isosysc.dsg.resolver.Application'
+}
